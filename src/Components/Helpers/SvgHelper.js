@@ -20,50 +20,29 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
 */
 
-html, body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+import React from 'react';
+import {useOvermind} from "../../Others/OvermindHelper";
+import PropTypes from "prop-types";
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
-::-webkit-scrollbar {
-    width: 0.75em; /* Remove scrollbar space */
-}
+const SvgHelper = props => {
+    const {state, actions} = useOvermind()
+    const {size = 48, path, styles = {}} = props;
 
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
-}
+    return (
+        <svg style={{width: size, height: size, ...styles}} viewBox="0 0 24 24">
+            <path fill={state.primaryColor}
+                  d={path}/>
+        </svg>
+    );
+};
 
-::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.1);
-    outline: 1px solid slategrey;
-}
+SvgHelper.propTypes = {
+    size: PropTypes.number,
+    path: PropTypes.string,
+    styles: PropTypes.object
+};
 
-/*
-'*::-webkit-scrollbar': {
-      width: '0.4em'
-    },
-    '*::-webkit-scrollbar-track': {
-      '-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.00)'
-    },
-    '*::-webkit-scrollbar-thumb': {
-      backgroundColor: 'rgba(0,0,0,.1)',
-      outline: '1px solid slategrey'
-    }
-*/
-
-#right-bottom-elements {
-    scroll-behavior: smooth;
-}
+export default SvgHelper;

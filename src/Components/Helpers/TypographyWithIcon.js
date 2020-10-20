@@ -20,50 +20,36 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
 */
 
-html, body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+import React from 'react';
+import Grid from "@material-ui/core/Grid";
+import {useOvermind} from "../../Others/OvermindHelper";
+import SvgHelper from "./SvgHelper";
+import Typography from "@material-ui/core/Typography";
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+const TypographyWithIcon = (props) => {
+    const {state, actions} = useOvermind()
 
-::-webkit-scrollbar {
-    width: 0.75em; /* Remove scrollbar space */
-}
+    return (
+        <Grid style={{padding: 8}} container direction='row' justify='flex-start' alignItems='center'
+              alignContent='center'>
+            <SvgHelper
+                size={18}
+                color={state.primaryColor}
+                path='M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z'/>
 
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
-}
+            <Typography style={{
+                marginLeft: 8,
+                marginRight: 8,
+                fontSize: 12,
+                fontWeight: 'bold',
+                color: "#757575"
+            }}>{props.children}</Typography>
+        </Grid>
+    );
+};
 
-::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.1);
-    outline: 1px solid slategrey;
-}
 
-/*
-'*::-webkit-scrollbar': {
-      width: '0.4em'
-    },
-    '*::-webkit-scrollbar-track': {
-      '-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.00)'
-    },
-    '*::-webkit-scrollbar-thumb': {
-      backgroundColor: 'rgba(0,0,0,.1)',
-      outline: '1px solid slategrey'
-    }
-*/
 
-#right-bottom-elements {
-    scroll-behavior: smooth;
-}
+export default TypographyWithIcon;

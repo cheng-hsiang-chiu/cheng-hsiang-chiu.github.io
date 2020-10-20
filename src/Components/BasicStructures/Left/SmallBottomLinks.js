@@ -20,50 +20,33 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
 */
 
-html, body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+import React from 'react';
+import Grid from "@material-ui/core/Grid";
+import {useOvermind} from "../../../Others/OvermindHelper";
+import {navContactIcons} from "../../../Others/MainItems";
+import SvgHelper from "../../Helpers/SvgHelper";
+import IconButton from "@material-ui/core/IconButton";
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+const SmallBottomLinks = () => {
+    const {state, actions} = useOvermind()
 
-::-webkit-scrollbar {
-    width: 0.75em; /* Remove scrollbar space */
-}
+    return (
+        <Grid style={{paddingBottom: 8, width: '100%'}} container direction='row' justify='center'
+              alignItems='center'
+              alignContent='center'>
+            {
+                navContactIcons.map((item, index) => {
+                    return <IconButton key={index} size='small' target="_blank" href={item.link}>
+                        <SvgHelper
+                            path={item.svgPath}
+                            size={18} styles={{margin: 3}}/>
+                    </IconButton>
+                })
+            }
+        </Grid>
+    );
+};
 
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.1);
-    outline: 1px solid slategrey;
-}
-
-/*
-'*::-webkit-scrollbar': {
-      width: '0.4em'
-    },
-    '*::-webkit-scrollbar-track': {
-      '-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.00)'
-    },
-    '*::-webkit-scrollbar-thumb': {
-      backgroundColor: 'rgba(0,0,0,.1)',
-      outline: '1px solid slategrey'
-    }
-*/
-
-#right-bottom-elements {
-    scroll-behavior: smooth;
-}
+export default SmallBottomLinks;

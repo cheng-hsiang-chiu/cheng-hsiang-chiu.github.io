@@ -20,50 +20,44 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
 */
 
-html, body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+// npm install overmind overmind-react
+// yarn add overmind overmind-react
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+import {createOvermind} from "overmind";
+import {createHook} from "overmind-react";
+import {primaryColor} from './MainItems'
 
-::-webkit-scrollbar {
-    width: 0.75em; /* Remove scrollbar space */
-}
-
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.1);
-    outline: 1px solid slategrey;
-}
-
-/*
-'*::-webkit-scrollbar': {
-      width: '0.4em'
+export const useOvermind = createHook();
+export const overmind = createOvermind({
+    state: {
+        counter: 0,
+        primaryColor: primaryColor,
+        drawerState: true,
+        belowSm: false,
+        bigDevice: false,
+        showColorPickerDialog: false
     },
-    '*::-webkit-scrollbar-track': {
-      '-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.00)'
-    },
-    '*::-webkit-scrollbar-thumb': {
-      backgroundColor: 'rgba(0,0,0,.1)',
-      outline: '1px solid slategrey'
+    actions: {
+        increase({state}, number) {
+            state.counter += number
+        },
+        setPrimaryColor({state}, color) {
+            state.primaryColor = color
+        },
+        setBelowSm({state}, b) {
+            state.belowSm = b
+        },
+        setBigDevice({state}, b) {
+            state.bigDevice = b
+            console.log("BIG: " + state.bigDevice)
+        },
+        setDrawerState({state}, b) {
+            state.drawerState = b
+        },
+        setShowColorPickerDialog({state}, b) {
+            state.showColorPickerDialog = b
+        }
     }
-*/
-
-#right-bottom-elements {
-    scroll-behavior: smooth;
-}
+});
