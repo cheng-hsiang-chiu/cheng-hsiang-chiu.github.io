@@ -1,24 +1,10 @@
 const news = [
   {
-    title: "One Paper Accepted by ICPADS 2020",
-    image_src: "images/icpads.png",
-    image_url: "https://icpads2020.comp.polyu.edu.hk/",
-    content: `Our work-stealing scheduling algorithm, <q>An Efficient Work-stealing Scheduler for Task Dependency Graph</q>, is accepted by 2020 IEEE International Conference on Parallel and Distributed Systems (ICPADS).`,
-    footer: "Last updated on 2020/10/11"
-  },
-  {
-    title: "One Paper Accepted by ASPDAC 2020",
-    image_src: "images/aspdac.png",
-    image_url: "http://www.aspdac.com/aspdac2021/",
-    content: `Our timing macro modeling algorithm, <q>ATM: A High Accuracy Extracted Timing Model for Hierarchical Timing Analysis</q>, is accepted by 2020 IEEE/ACM Asia and South Pacific Design Automation Conference (ASPDAC).`,
-    footer: "Last updated on 2020/10/01"
-  },
-  {
-    title: "Tutorial @ ICCAD 2020",
+    title: "Attendance @ ICCAD 2020",
     image_src: "images/2020_ICCAD-logo.jpg",
     image_url: "https://iccad.com/",
-    content: `We will share our experience of using Taskflow to parallelize CAD in the tutorial session <q><a href="https://iccad.com/event_details?id=305-12-D">GPU Acceleration in CAD: Opportunities and Challenges</a></q> at the 2020 IEEE/ACM International Conference on Computer-aided Design (ICCAD)!`,
-    footer: "Last updated on 2020/10/01"
+    content: `I will attend the tutorial session talking about experience of using Taskflow to parallelize CAD<q><a href="https://iccad.com/event_details?id=305-12-D">GPU Acceleration in CAD: Opportunities and Challenges</a></q> at the 2020 IEEE/ACM International Conference on Computer-aided Design (ICCAD)!`,
+    footer: "Last updated on 2020/10/21"
   },
   {
     title: "Taskflow @ WOSET 2020",
