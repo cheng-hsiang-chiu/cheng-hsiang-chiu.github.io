@@ -18,7 +18,7 @@ const news = [
     image_src: "images/mucpp-meetup.jpeg",
     image_url: "https://www.meetup.com/MUCplusplus/events/273223910/",
     content: `I will attend the event presenting to the C++ group at München, Germany. <q><a href="https://www.meetup.com/MUCplusplus/events/273223910/">Taskflow: A General-purpose Parallel and Heterogeneous Task Programming System</a></q>, on Thu, Oct 22, 7:00 PM GMT+2.`,
-    footer: "Last updated on 2020/09/25"
+    footer: "Last updated on 2020/10/21"
   },
   {
     title: "Attendance @ CppCon 2020",
