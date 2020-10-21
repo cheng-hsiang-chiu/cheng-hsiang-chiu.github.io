@@ -29,7 +29,7 @@ const news = [
   },
   {
     title: "Attendance @ HPEC 2020",
-    image_src: "images/2020_hpec.jpg",
+    image_src: "images/2020_hpec.png",
     image_url: "http://www.ieee-hpec.org/",
     content: `I attended IEEE HPEC 2020.`,
     footer: "Last updated on 2020/10/21"
