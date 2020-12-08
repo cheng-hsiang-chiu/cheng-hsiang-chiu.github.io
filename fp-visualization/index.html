@@ -27,7 +27,8 @@ function placement() {
 
   ctx.fillStyle = "#000000";
   ctx1.fillStyle = "#FF0000";  
-  
+  ctx2.strokeStyle = "green";
+
   var i;
   for(i = 0; i < obj.coordinates.length; ++i) {
     var obji = obj.coordinates[i];
@@ -38,7 +39,6 @@ function placement() {
   }
   // document.getElementById("demo").innerHTML = obj.block_number + "," + obj.coordinates[0].width;
   ctx2.beginPath();
-  ctx2.strokeStyle = "green";
   ctx2.rect(0, 0, obj.urx, obj.ury);
   ctx2.stroke();
 }
