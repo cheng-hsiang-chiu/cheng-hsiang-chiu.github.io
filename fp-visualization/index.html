@@ -17,32 +17,26 @@ function placement() {
 
   var canvas = document.getElementById("mycanvas");
   var ctx = canvas.getContext("2d");
-  var ctx1 = canvas.getContext("2d");
-  var ctx2 = canvas.getContext("2d");
   
   document.getElementById("demo").innerHTML = "area = " + obj.area;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx1.clearRect(0, 0, canvas.width, canvas.height);
-  ctx2.clearRect(0, 0, canvas.width, canvas.height);
-
-  ctx.fillStyle = "#000000";
-  ctx1.fillStyle = "#FF0000";  
-  //ctx2.strokeStyle = "green";
 
   var i;
   for(i = 0; i < obj.coordinates.length; ++i) {
     var obji = obj.coordinates[i];
-    ctx.strokeRect(obji.llx, obji.lly, obji.width, obji.height);
+    ctx.beginPath();
+    ctx.strokeStyle = "#000000";
+    ctx.rect(obji.llx, obji.lly, obji.width, obji.height);
+    ctx.stroke();
     
-    ctx1.font = "10px Arial";
-    ctx1.fillText(obji.idx, obji.llx+obji.width/2, obji.lly+obji.height/2);
+    ctx.font = "10px Arial";
+    ctx.fillStyle = "#FF0000";
+    ctx.fillText(obji.idx, obji.llx+obji.width/2, obji.lly+obji.height/2);
   }
-  // document.getElementById("demo").innerHTML = obj.block_number + "," + obj.coordinates[0].width;
-  //ctx2.beginPath();
-  //ctx2.rect(0, 0, obj.urx, obj.ury);
-  //ctx2.stroke();
-  ctx2.fillStyle = "#009933"; 
-  ctx2.strokeRect(0 ,0 , obj.urx, obj.ury);
+  ctx.beginPath();
+  ctx.strokeStyle = "#009933";
+  ctx.rect(0, 0, obj.urx, obj.ury);
+  ctx.stroke();
 }
 </script>
 
