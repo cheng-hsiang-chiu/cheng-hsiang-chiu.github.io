@@ -28,19 +28,20 @@ function placement() {
   ctx.fillStyle = "#000000";
   ctx1.fillStyle = "#FF0000";  
   //ctx2.strokeStyle = "green";
-  ctx2.fillStyle = "green";
+
   var i;
   for(i = 0; i < obj.coordinates.length; ++i) {
     var obji = obj.coordinates[i];
     ctx.strokeRect(obji.llx, obji.lly, obji.width, obji.height);
     
-    ctx1.font = "3px Arial";
+    ctx1.font = "10px Arial";
     ctx1.fillText(obji.idx, obji.llx+obji.width/2, obji.lly+obji.height/2);
   }
   // document.getElementById("demo").innerHTML = obj.block_number + "," + obj.coordinates[0].width;
   //ctx2.beginPath();
   //ctx2.rect(0, 0, obj.urx, obj.ury);
   //ctx2.stroke();
+  ctx2.fillStyle = "green"; 
   ctx2.strokeRect(0 ,0 , obj.urx, obj.ury);
 }
 </script>
