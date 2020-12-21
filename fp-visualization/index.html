@@ -57,7 +57,9 @@ Floor plan visualization
 
     var mouseover = function(d) {
       tooltip.style("visibility", "visible")
-      .html("id:" + d.idx + "<br>width:" + d.width + "<br>height: " + d.height);
+      .html("id:" + d.idx + "<br>width:" + d.width + "<br>height: " + d.height + 
+            "<br>(" + d.llx + "," + d.lly + 
+            ") -> (" + (d.llx+d.width) + "," + (d.lly+d.height) + ")");
     };
 
     var mousemove = function() {
