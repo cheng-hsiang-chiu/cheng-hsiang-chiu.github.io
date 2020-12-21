@@ -1,46 +1,110 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<title>
+Floor plan visualization
+</title>
 <body>
+<div>
+  <textarea id="floorplan-json" rows="8" cols="100" oninput="redraw()">{"circuit":"../../circuits/circuit1.txt","block_number":4,"llx":0,"lly":0,"urx":856,"ury":488,    "area":417728,"coordinates":[{"idx":0,"llx":549,"lly":0,"width":296,"height":280},{"idx":1,"llx":523,"lly":296,"width":333,"height":188},{"idx":2,"llx":0,"lly":296,"width":523,"height":192},{"idx":3,"llx":0,"lly":0,"width":549,"height":296}], "cost":[12,13,14,6,50,100,66,36,26,71]}  
+  </textarea>
+</div>
+  <script>
+  redraw();
 
-<textarea id="floorplan" name ="floorplan" rows="16" cols="16">
-</textarea>
-
-<button type="button" onclick="placement()">Build</button>
-
-<p id="demo"></p>
-
-<script>
-function placement() {
-  var x = document.getElementById("floorplan").value;
-  var obj = JSON.parse(x);
-
-  var canvas = document.getElementById("mycanvas");
-  var ctx = canvas.getContext("2d");
-  
-  document.getElementById("demo").innerHTML = "area = " + obj.area;
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  var i;
-  for(i = 0; i < obj.coordinates.length; ++i) {
-    var obji = obj.coordinates[i];
-    ctx.beginPath();
-    ctx.strokeStyle = "#000000";
-    ctx.rect(obji.llx, obji.lly, obji.width, obji.height);
-    ctx.stroke();
+  function redraw() {  
+    d3.select('svg').remove();
+    d3.select('#tooltip').remove();
     
-    ctx.font = "10px Arial";
-    ctx.fillStyle = "#FF0000";
-    ctx.fillText(obji.idx, obji.llx+obji.width/2, obji.lly+obji.height/2);
+    var floorplan = JSON.parse(d3.select("textarea").node().value);
+    var i;
+    var modules_conf=[];
+    for(i = 0; i < floorplan.block_number; ++i) {
+      modules_conf.push(floorplan.coordinates[i]);
+    }
+
+
+    // Start by creating the svg area
+    var svg = d3.select("body")
+      .append("svg")
+      .attr("width", floorplan.urx)
+      .attr("height", floorplan.ury);
+
+
+    var boundary = svg.append("rect")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("width", floorplan.urx)
+      .attr("height", floorplan.ury)
+      .attr("fill", "none")
+      .attr("stroke-width", 1)
+      .attr("stroke", "blue")
+      .attr("id", "boundary");
+
+
+
+    // create a tooltip
+    var tooltip = d3.select("body")
+      .append("div")
+      .style("position", "absolute")
+      .style("visibility", "hidden")
+      .attr("id", "tooltip");
+
+
+
+    var mouseover = function(d) {
+      tooltip.style("visibility", "visible")
+      .html("id:" + d.idx + "<br>width:" + d.width + "<br>height: " + d.height);
+    };
+
+    var mousemove = function() {
+      tooltip.style("top", (event.pageY+20)+"px").style("left",(event.pageX+20)+"px");
+    };
+    
+    var mouseout = function() {  
+      tooltip.style("visibility", "hidden");
+    };
+
+    // Append modules
+    var modules = svg.selectAll("#modules")
+      .data(modules_conf)
+      .enter()
+      .append("rect")
+      .attr("id", "modules")
+      .attr("x", function(d) { return d.llx; })
+      .attr("y", function(d) { return d.lly; })
+      .attr("width", function(d) { return d.width; })
+      .attr("height", function(d) { return d.height; })
+      .attr("fill", "#b3ffcc")
+      .attr("stroke-width", 1)
+      .attr("stroke", "red")
+      .on("mouseover", mouseover)
+      .on("mousemove", mousemove)
+      .on("mouseout", mouseout); 
+
+
+    /*
+
+    var svg2 = d3.select("body")
+      .append("svg")
+      .attr("width", 200)
+      .attr("height", 200);
+   
+    var chart = svg2.append("path")
+      .datum(floorplan.cost)
+      .attr("fill", "none")
+      .attr("stroke", "steelblue")
+      .attr("stroke-width", 2)
+      .attr("d", d3.line()
+        .x(function(d,i) { return i*5; })
+        .y(function(d) { return d; })
+      );
+      
+    */
   }
-  ctx.beginPath();
-  ctx.strokeStyle = "#009933";
-  ctx.rect(0, 0, obj.urx, obj.ury);
-  ctx.stroke();
-}
-</script>
-
-<canvas id="mycanvas" width="10000" height="10000" style="border:1px solid #d3d3d3;">
-
+  </script>
 </body>
 </html>
