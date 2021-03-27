@@ -1,5 +1,12 @@
 const news = [
   {
+    title: "Attendance @ ISPD 2021 Contest",
+    image_src: "images/ISPD_21_Honorable_Mention.png",
+    image_url: "https://cerebras.net/ispd-2121-contest",
+    content: `I attended the contest which aims to map a 3-D Finite Element model on a 20D grid of processing elements in a supercomputer, Cerebras CS-1.`,
+    footer: "Last updated on 2021/03/26"
+  },
+  {
     title: "Attendance @ ICCAD 2020",
     image_src: "images/2020_ICCAD-logo.jpg",
     image_url: "https://iccad.com/",
