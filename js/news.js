@@ -10,7 +10,7 @@ const news = [
     title: "Attendance @ ERUO PAR 2021",
     image_src: "images/2021-europar.png",
     image_url: "https://amte2021.stellar-group.org/program",
-    content: `I gave a presentation at AMTE, held in conjunction with Euro-par 2021`,
+    content: `I gave a presentation of my publication at AMTE, held in conjunction with Euro-par 2021. The title of the publication is "An Experimental Study of SYCL Task Graph Paralleliem for Large-Scale machine Learning Workloads"`,
     footer: "Last updated on 2021/09/30"
   },
   {
