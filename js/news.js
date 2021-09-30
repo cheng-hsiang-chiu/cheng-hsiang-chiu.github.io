@@ -1,5 +1,19 @@
 const news = [
   {
+    title: "Attendance @ CPP Conference 2021",
+    image_src: "images/2021-cppcon-banner.jpg",
+    image_url: "https://cppcon.org",
+    content: `I will attend CPP Conference 2021 on October 24-29`,
+    footer: "Last updated on 2021/09/30"
+  },
+  {
+    title: "Attendance @ ERUO PAR 2021",
+    image_src: "images/2021-europar-logo.png",
+    image_url: "https://amte2021.stellar-group.org/program",
+    content: `I gave a presentation at AMTE, held in conjunction with Euro-par 2021`,
+    footer: "Last updated on 2021/09/30"
+  },
+  {
     title: "Attendance @ ISPD 2021 Contest",
     image_src: "images/ISPD_21_Honorable_Mention.png",
     image_url: "https://cerebras.net/ispd-2121-contest",
