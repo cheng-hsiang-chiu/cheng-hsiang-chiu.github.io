@@ -3,7 +3,7 @@ const news = [
     title: "Attendance @ CPP Conference 2021",
     image_src: "images/2021-cppcon-banner.jpg",
     image_url: "https://cppcon.org",
-    content: `I will attend CPP Conference 2021 on October 24-29`,
+    content: `I attended CPP Conference 2021 on October 24-29 in Aurora, Colorado`,
     footer: "Last updated on 2021/09/30"
   },
   {
