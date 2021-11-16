@@ -1,9 +1,9 @@
 const news = [
   {
     title: "Attendance @ DAC Young Fellows Program 2021",
-    image_src: "images/2021-cppcon-banner.jpg",
+    image_src: "images/2021_DAC_logo.png",
     image_url: "https://www.dac.com/Attend/Students-Scholarships/Young-Student-Fellow-Program",
-    content: `I attended CPP Conference 2021 on October 24-29 in Aurora, Colorado`,
+    content: `I am attending DAC Young Fellows Program 2021. The Design Automation Conference (DAC) is recognized as the premier conference for design and automation of electronic systems.`,
     footer: "Last updated on 2021/11/15"
   },
   {
