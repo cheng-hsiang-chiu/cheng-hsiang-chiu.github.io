@@ -1,10 +1,10 @@
 const news = [
   {
-    title: "Attendance @ CPP Conference 2021",
+    title: "Attendance @ DAC Young Fellows Program 2021",
     image_src: "images/2021-cppcon-banner.jpg",
-    image_url: "https://cppcon.org",
+    image_url: "https://www.dac.com/Attend/Students-Scholarships/Young-Student-Fellow-Program",
     content: `I attended CPP Conference 2021 on October 24-29 in Aurora, Colorado`,
-    footer: "Last updated on 2021/09/30"
+    footer: "Last updated on 2021/11/15"
   },
   {
     title: "Attendance @ CPP Conference 2021",
