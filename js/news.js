@@ -3,7 +3,7 @@ const news = [
     title: "Reviewer @ DAC 2022",
     image_src: "images/2022_DAC_logo.png",
     image_url: "https://www.dac.com",
-    content: `I am reviewing papers under the track DES5-I AI/ML Design: System and Platform at DAC2022.`,
+    content: `I am reviewing papers of DAC2022.`,
     footer: "Last updated on 2022/01/25"
   },
 
