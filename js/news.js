@@ -1,5 +1,13 @@
 const news = [
   {
+    title: "Reviewer @ DAC 2022",
+    image_src: "images/2022_DAC_logo.png",
+    image_url: "https://www.dac.com",
+    content: `I am reviewing papers under the track DES5-I AI/ML Design: System and Platform at DAC2022.`,
+    footer: "Last updated on 2022/01/25"
+  },
+
+  {
     title: "Attendance @ DAC Young Fellows Program 2021",
     image_src: "images/2021_DAC_logo.png",
     image_url: "https://www.dac.com/Attend/Students-Scholarships/Young-Student-Fellow-Program",
