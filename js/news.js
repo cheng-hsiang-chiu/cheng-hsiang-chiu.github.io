@@ -1,13 +1,13 @@
 const news = [
   {
-    title: "Poster accepted @ HPDC 2022",
+    title: "Poster Accepted @ HPDC 2022",
     image_src: "images/2022_HPDC_logo.png",
     image_url: "https://www.hpdc.org/2022",
     content: `My paper "Composing Pipeline Parallelism using Control Taskflow Graph" is accepted by HPDC 2022.`,
     footer: "Last updated on 2022/04/21"
   },
   {
-    title: "Paper accepted @ DAC 2022",
+    title: "Paper Accepted @ DAC 2022",
     image_src: "images/2022_DAC_logo.png",
     image_url: "https://www.dac.com",
     content: `My paper "Efficient Timing Propagation with Simultaneous Structural and Pipeline Parallelisms" is accepted by DAC 2022.`,
