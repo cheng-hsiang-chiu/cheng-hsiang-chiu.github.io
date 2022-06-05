@@ -6,6 +6,7 @@ const news = [
     content: `My 2022 summer internship in intel is working on oneAPI and SYCL`,
     footer: "Last updated on 2022/06/06"
   },
+  {
     title: "Poster Accepted @ HPDC 2022",
     image_src: "images/2022_HPDC_logo.png",
     image_url: "https://www.hpdc.org/2022",
