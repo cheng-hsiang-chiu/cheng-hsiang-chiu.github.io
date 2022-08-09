@@ -1,5 +1,12 @@
 const news = [
   {
+  {
+    title: "Received HPDC'22 Student Travel Awards",
+    image_src: "images/2022_HPDC_logo.png",
+    image_url: "https://www.hpdc.org/2022/registration/grants/",
+    content: `I received a HPDC'22 Student Travel Awards funded by NSF.`,
+    footer: "Last updated on 2022/08/08"
+  },
     title: "Software Intern @ intel",
     image_src: "images/intel.png",
     image_url: "https://www.intel.com/content/www/us/en/developer/tools/oneapi/overview.html",
