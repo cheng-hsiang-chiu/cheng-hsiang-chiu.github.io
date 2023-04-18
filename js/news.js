@@ -1,5 +1,12 @@
 const news = [
   {
+    title: "Attendance @ DAC Young Fellows Program 2023",
+    image_src: "images/2023_DAC_logo.png",
+    image_url: "https://www.dac.com/Attend/Students-Scholarships/Young-Student-Fellow-Program",
+    content: `I will attend DAC Young Fellows Program 2023. The Design Automation Conference (DAC) is recognized as the premier conference for design and automation of electronic systems.`,
+    footer: "Last updated on 2023/04/18"
+  },
+  {
     title: "Received HPDC'22 Student Travel Awards",
     image_src: "images/2022_HPDC_logo.png",
     image_url: "https://www.hpdc.org/2022/registration/grants/",
