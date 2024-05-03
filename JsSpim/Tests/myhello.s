@@ -1,9 +1,10 @@
+
 	.data
-	.align 4
+	.align 2
 _a:
 	.space 4
 	.data
-	.align 4
+	.align 2
 _b:
 	.space 4
 	.text
