@@ -63,33 +63,20 @@
     <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
   </li>
   <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#activity">Activities</a>
+  </li>
+  <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#research">Research</a>
   </li>
-  <!--
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#people">People</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#awards">Awards</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#teaching">Teaching</a>
-  </li>
-  -->
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#publication">Publication</a>
+    <a class="nav-link" data-toggle="tab" href="#publication">Publications</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#work">Work Experience</a>
   </li>
-  <!--
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#service">Service</a>
+    <a class="nav-link" data-toggle="tab" href="#talk">Talks</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#thank-you">Thank-you</a>
-  </li>
-  -->
 </ul>
 
 <!-- Tab panes -->
@@ -121,11 +108,83 @@ Multiple PhD and Postdoc positions are available in my research team!
   <!--</div>-->
 </div>  <!-- end of home tab -->
 
+
+<!-- begin of activities -->
+<div id="activity" class="container tab-pane fade"><br>
+<font size="6">Awards</font>
+<ul>
+  <li>ACM/IEEE DAC Young Student Fellowship, 2024</li>
+  <li>ACM/IEEE DAC Young Student Fellowship, 2023</li>
+  <li>ACM/IEEE DAC Young Student Fellowship, 2022</li>
+  <li>ACM/IEEE DAC Young Student Fellowship, 2021</li>
+  <li>ACM/IEEE HPDC Traveling Grant, 2022</li>
+  <li>ACM ISPD Wafer-Scale Physics Modeling Contest - Honorable Mention, 2021</li>
+</ul>
+<br>
+<font size="6">Program Committee</font>
+<ul>
+  <li>CppCon, 2023, 2024, 2025</li>
+  <li>CppNow, 2023</li>
+  <li>MLCAD, 2024</li>
+</ul>
+<br>
+<font size="6">Invited Paper Review</font>
+<ul>
+  <li>CppCon, 2023, 2024, 2025</li>
+  <li>CppNow, 2023</li>
+  <li>DAC, 2022, 2023, 2025</li>
+  <li>DATE, 2025</li>
+  <li>ICCAD, 2024, 2025</li>
+  <li>ICCD, 2023</li>
+  <li>IPDPS, 2024</li>
+  <li>ISVLSI, 2024</li>
+  <li>MLCAD, 2024</li>
+  <li>MICRO, 2025</li>
+  <li>SC, 2023</li>
+</ul>
+</div> <!-- end of activities-->
+
+
+<!-- begin of talks -->
+<div id="talk" class="container tab-pane fade"><br>
+<ul>
+  <li> "<a href="https://www.youtube.com/watch?v=AudA4WpTW6U&pp=ygURQ2hlbmctSHNpYW5nIENIaXU%3D" target="_blank">Pipeflow: C++ Task-Parallel Pipeline Scheduling Framework</a>", CppNow, October 2023</li>
+</ul>
+</div> <!-- end of talks-->
+
+
+<!-- begin of work experience  -->
+<div id="work" class="container tab-pane fade"><br>
+<ul>
+  <li> Summer Intern, [May 2022 - August 2022], Intel</li>
+  <li> Summer Intern, [May 2021 - August 2021], Cadence</li>
+  <li> Doctoral Researcher, [February 2019 - December 2019], UiT</li>
+  <li> Assistance Researcher, [Jaunary 2018 - November 2018], Khalifa University</li>
+  <li> Software Developer, [March 2015 - August 2015], CERN</li>
+  <li> Research Assistant, [January 2009 - June 2013], National Chiao Tung University</li>
+</ul>
+</div>
+
 <!-- begin of research -->
 <div id="research" class="container tab-pane fade"><br>
 
-<h2>Current Project</h2>
-
+  <font size="6"><a href="https:://taskflow.github.io/" target="_blank">Taskflow, AsyncTask, Pipeflow, syncFlow</a></font>
+  <ul>
+    <li>Taskflow helps C++ developers quickly and efficiently write parallel and heterogeneous programs
+    with high performance and simultaneous high productivity</li>
+    <li>AsyncTask enables devlopers to explore dynamic task graph parallelism in their applications</li>
+    <li>Pipeflow provide an efficient pipeline scheduling framework</li>
+    <li>syclFLow allows users to write GPU codes using single source programming model SYCL easily</li>
+  </ul>
+  <br>
+  <font size="6">Reinforcement Learning-based Scheduling</font>
+  <ul>
+    <li>Resource-efficient RL-based task scheuling assigns tasks across underlying computing units for the purpose of resource efficiency and workload balancing</li>
+    <li>RL-generated topological ordering for task graphs with work stealing runtime</li>
+    <li>RL-based CUDA Graph scheduing optimization</li>
+  </ul>
+</div>
+  <!--
   <p></p>
   
   <div class="row row-padded vertical-align">
@@ -147,7 +206,7 @@ Multiple PhD and Postdoc positions are available in my research team!
   </div>
  
 
-<h2>Past Projects</h2>
+<font size="6">Past Projects</font>
 
   <p></p> 
   <div class="row row-padded vertical-align">
@@ -238,10 +297,11 @@ Multiple PhD and Postdoc positions are available in my research team!
   </div>
   
 </div>
+-->
 
 <!-- begin of publication  -->
 <div id="publication" class="container tab-pane fade"><br>
-<h2>Conference Papers</h2>
+<font size="6">Conference Papers</font>
 
   <ol>
   <li> Chedi Morchdi, <b><u>Cheng-Hsiang Chiu</u></b>, Wan Luan Lee, Tsung-Wei Huang, and Yi Zhou, "Enhancing Graph Partitioning with Reinforcement Learning-based Initialization," <i>IEEE High Performance Extreme Computing (HPEC)</i>, 2025
@@ -344,7 +404,7 @@ Multiple PhD and Postdoc positions are available in my research team!
 
 <hr>
 
-<h2>Journal Papers</h2>
+<font size="6">Journal Papers</font>
 <ol> 
     <li> Wan-Luan Lee, Dian-Lun Lin, Shui Jiang, <b><u>Cheng-Hsiang Chiu</u></b>, Yibo Lin, Bei Yu, Tsung-Yi Ho, and Tsung-Wei Huang, "<a href="https://dl.acm.org/doi/10.1145/3734522" target="_blank">G-kway: Multilevel GPU-Accelerated k-way Graph Partitioner using Task Graph Parallelism</a>," <i>ACM Transactions on Design Automation of Electronic Systems (TODAES)</i>, 2025 
     </li>
@@ -373,7 +433,7 @@ Multiple PhD and Postdoc positions are available in my research team!
 <hr>
 -->
 
-<h2>Thesis</h2>
+<font size="6">Thesis</font>
 <ol>
   <li>Cheng-Hsiang Chiu,
   "<a href="papers/PhD_Dissertation.pdf" target="_blank">Asynchronous Many-task System with Intelligent Scheduling</a>," 
